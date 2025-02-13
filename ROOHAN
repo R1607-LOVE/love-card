@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Valentine Message</title>
+    <style>
+        body {
+            background-color: #ffccd5;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .message {
+            margin-top: 100px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1 class="heart">❤</h1>
+        <h2 id="greeting"></h2>
+        <p>Happy Valentine's Day! You are special! 💕</p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.getElementById('greeting').innerText = "Hey " + ROHAN + "!";
+        } else {
+            document.getElementById('greeting').innerText = "Happy Valentine's!";
+        }
+    </script>
+</body>
+</html>
